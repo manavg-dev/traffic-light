@@ -1,0 +1,96 @@
+//Timers
+int timerRG = 10000;
+int timerY = timerRG/2;
+int timetocross = timerRG/1000;
+
+//LCD
+#include <LiquidCrystal.h>
+LiquidCrystal lcd_1(10,9,8,7,6,5); //Change the numbers to match the pins of your arduino
+
+//LED
+int redLED = 2;
+int greenLED = 3;
+int yellowLED = 4;
+
+//Button
+int button = 11;
+int buttonPressed = 0;
+void waitAndCheckButton(int waitTime);
+
+void setup()
+{
+  //sets up the pins as outputs, for the trafic lights and the button as an input
+  pinMode(redLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+  pinMode(yellowLED, OUTPUT);
+  pinMode(button, INPUT);
+  //Tells the LCD where to start it's message
+  lcd_1.begin(16,2);
+}
+
+void loop()
+{
+  //Red LED code
+  digitalWrite(redLED,HIGH);
+  lcd_1.print("Don't Cross");
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("Press Button");
+  waitAndCheckButton(timerRG);
+  digitalWrite(redLED,LOW);
+
+  //Green LED code
+  digitalWrite(greenLED,HIGH);
+  //Code for if the button was pressed
+  if(buttonPressed == 1)
+  {
+    for (int timeLeft = timetocross; timeLeft >= 0; timeLeft--) {
+          lcd_1.clear();
+          lcd_1.begin(16,2);
+          lcd_1.print("Cross");
+    	  lcd_1.setCursor(0, 1);
+    	  lcd_1.print(timeLeft);
+    	  lcd_1.print("  ");
+
+        //Waits 1 second before repeating the code
+    	  delay(1000);
+ 	}
+    //Resets the button for the next time the button will be pressed
+    buttonPressed = 0;
+  }
+
+  //Code for if the button was not pressed
+  else {
+    lcd_1.clear();
+    lcd_1.setCursor(0,0);
+    lcd_1.print("Don't Cross");
+    //Waits 10 seconds before continuing the code
+    delay(timerRG);
+    }
+  digitalWrite(greenLED,LOW);
+
+  //Yellow LED code
+  digitalWrite(yellowLED,HIGH);
+  lcd_1.clear();
+  lcd_1.begin(16,2);
+  lcd_1.print("Wait to Cross");
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("Press Button");
+  waitAndCheckButton(timerY);
+  digitalWrite(yellowLED,LOW);
+}
+
+//stores the information for the button was pressed
+void waitAndCheckButton(int waitTime)
+{
+  int timePassed = 0;
+  while(timePassed < waitTime)
+  {
+    int crossWalkButton = digitalRead(button);
+    if(crossWalkButton==HIGH)
+    {
+      buttonPressed =1;
+    }
+    delay(100);
+    timePassed = timePassed + 100;   
+  }
+}
