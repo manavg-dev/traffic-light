@@ -3,7 +3,7 @@
 This circut simulates a traffic intersection with a pedestrian crosswalk using an Arduino.
 The system controls traffic lights and allows pedestrians to cross using a button input.
 
-## Components                    ##yeah
+## Components                    ## yeah
 - Arduino Uno
 - LEDs (Red, Yellow, Green)
 - Push button (1)
