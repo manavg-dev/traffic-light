@@ -38,7 +38,7 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 
 ### Green Light (GO)
 
-![Green Light](green-light.jpg)
+![Green Light](green-cross.HEIC)
 
 ### Pedestrian Crossing Activated
 
