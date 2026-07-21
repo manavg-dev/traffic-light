@@ -1,3 +1,4 @@
+
 # traffic-light
 ## Overview
 This circut simulates a traffic intersection with a pedestrian crosswalk using an Arduino.
@@ -28,18 +29,3 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 
 ## Circuit Images
 
-### Red Light (STOP)
-
-![Red Light](red-light.jpg)
-
-### Yellow Light (CAUTION)
-
-![Yellow Light](yellow-light.jpg)
-
-### Green Light (GO)
-
-![Green Light](green-cross.HEIC)
-
-### Pedestrian Crossing Activated
-
-![Pedestrian Crossing](circuit(Green, button not pressed))
