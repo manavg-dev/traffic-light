@@ -1,5 +1,5 @@
 
-# traffic-light
+# Traffic-light🚦
 ## Overview
 This circut simulates a traffic intersection with a pedestrian crosswalk using an Arduino.
 The system controls traffic lights and allows pedestrians to cross using a button input.
@@ -36,5 +36,8 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 
 ### Red Light
 <img src="images/red-light.png" width="200" height="300">
+
+### Yellow Light
+<img src="images/yellow-light.png" width="200" height="300">
 
 
