@@ -28,4 +28,10 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 6. Once pedestrians have crossed safely, the system returns to its normal traffic light cycle.
 
 ## Circuit Images
+### Green Light, Cross
 ![Green Cross](images/green-cross.png)
+
+### Green Light, Don't Cross
+![Green Don't Cross](images/green-dontcross.png)
+
+
