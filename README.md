@@ -29,11 +29,12 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 
 ## Circuit Images
 ### Green Light, Cross
-<img src="images/green-cross.png" width="300" height="400">
+<img src="images/green-cross.png" width="200" height="300">
 
 ### Green Light, Don't Cross
-<img src="images/green-dont-cross.png" width="300" height="400">
+<img src="images/green-dont-cross.png" width="200" height="300">
 
-
+### Red Light
+<img src="images/red-light.png" width="200" height="300">
 
 
