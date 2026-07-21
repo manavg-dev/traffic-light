@@ -32,6 +32,6 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 ![Green Cross](images/green-cross.png)
 
 ### Green Light, Don't Cross
-![Green Don't Cross](images/green-dontcross.png)
+![Green Don't Cross](images/green-dont cross.png)
 
 
