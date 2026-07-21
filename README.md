@@ -42,4 +42,4 @@ The system controls traffic lights and allows pedestrians to cross using a butto
 
 ### Pedestrian Crossing Activated
 
-![Pedestrian Crossing](pedestrian-crossing.jpg)
+![Pedestrian Crossing](circuit(Green, button not pressed))
